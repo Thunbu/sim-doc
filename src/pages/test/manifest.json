@@ -1,0 +1,9 @@
+{
+  "link": [
+    "react",
+    "react-dom",
+    "redux",
+    "react-redux",
+    "react-virtualized"
+  ]
+}

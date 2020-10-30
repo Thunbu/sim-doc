@@ -1,0 +1,19 @@
+{
+  "split" : [
+    {
+      "name": "react",
+      "reg": "[\\/]node_modules[\\/]react\\/",
+      "fileName": "react.js"
+    },
+    {
+      "name": "react-dom",
+      "reg": "[\\/]node_modules[\\/](react-dom)[\\/]?",
+      "fileName": "react-dom.js"
+    },
+    {
+      "name": "vendors",
+      "reg": "[\\/]node_modules[\\/]^(react|react-dom)[\\/]?",
+      "fileName": "vendors.js"
+    }
+  ]
+}
