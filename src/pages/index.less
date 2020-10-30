@@ -1,9 +1,61 @@
-@import "../assets/css/base";
-
-html, body{
-	height: 100%;
+@import "../assets/css/rest.css";
+html {
+	font-size: 16px;
+	line-height: 1.4;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }
-#root {
+html body {
 	height: 100%;
+	#root{
+		height: 100%;
+	}
+	.content {
+		height: 100%;
+		overflow: hidden;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.leftMenu{
+		min-width: 16rem;
+		overflow: auto;
+		height: 100%;
+		flex-shrink: 0;
+		background-color: rgb(42, 42, 43);
+		.menuTitle{
+			color: rgb(217, 217, 217);
+		}
+	}
+	.rightContainer{
+		flex: 1;
+		overflow: auto;
+		height: 100%;
+		padding: 24px;
+		h1, h2, h3, h4, h5, h6{
+			font-weight: bold;
+			margin: 12px 0;
+		}
+		h1{
+			padding-bottom: 48px;
+		}
+		h2{
+			padding-bottom: 32px;
+		}
+		h3{
+			padding-bottom: 24px;
+		}
+		h4, p, div{
+			padding-bottom: 12px;
+		}
+		table{
+			margin: 12px 0;
+		}
+		td, th {
+			padding: 8px 12px;
+			border: 1px solid var(--text-color);
+		}
+	}
 }
-

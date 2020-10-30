@@ -11,8 +11,63 @@
       "fileName": "react-dom.js"
     },
     {
+      "name": "react-router",
+      "reg": "[\\/]node_modules[\\/](react-router|react-router-dom)[\\/]?",
+      "fileName": "react-router.js"
+    },
+    {
+      "name": "react-redux",
+      "reg": "[\\/]node_modules[\\/](react-redux|redux|redux-thunk)[\\/]?",
+      "fileName": "react-redux.js"
+    },
+    {
+      "name": "axios",
+      "reg": "[\\/]node_modules[\\/](axios)[\\/]?",
+      "fileName": "axios.js"
+    },
+    {
+      "name": "antd",
+      "reg": "[\\/]node_modules[\\/](antd)[\\/]?",
+      "fileName": "antd.js"
+    },
+    {
+      "name": "ant-design",
+      "reg": "[\\/]node_modules[\\/](@ant-design)[\\/]?",
+      "fileName": "ant-design.js"
+    },
+    {
+      "name": "about-rc",
+      "reg": "[\\/]node_modules[\\/](rc-\\s?)[\\/]?",
+      "fileName": "about-rc.js"
+    },
+    {
+      "name": "lodash",
+      "reg": "[\\/]node_modules[\\/](lodash)[\\/]?",
+      "fileName": "lodash.js"
+    },
+    {
+      "name": "history",
+      "reg": "[\\/]node_modules[\\/](history)[\\/]?",
+      "fileName": "history.js"
+    },
+    {
+      "name": "async-validator",
+      "reg": "[\\/]node_modules[\\/](async-validator)[\\/]?",
+      "fileName": "async-validator.js"
+    },
+    {
+      "name": "aliYunOss",
+      "reg": "[\\/]node_modules[\\/](ali-oss)[\\/]?",
+      "fileName": "aliYunOss.js"
+    },
+    {
+      "name": "moment",
+      "reg": "[\\/]node_modules[\\/](moment)[\\/]?",
+      "fileName": "moment.js"
+    },
+    {
       "name": "vendors",
-      "reg": "[\\/]node_modules[\\/]^(react|react-dom)[\\/]?",
+      "reg": "[\\/]node_modules[\\/](create-react-class|core-js|dom-align|mini-store|tinycolor2|scheduler|css-animation|style-loader|babel-runtime|resize-observer-polyfill|dom-scroll-into-view|add-dom-event-listener|react-is|enquire.js|process|ismobilejs|create-react-context|react-lifecycles-compat|lodash.keys|component-classes|mutationobserver-shim|object-assign|hoist-non-react-statics|raf|prop-types|fbjs|css-loader|@babel|classnames|value-equal|resolve-pathname|performance-now|shallowequal|symbol-observable|is-buffer|invariant|dom-matches)[\\/]?",
       "fileName": "vendors.js"
     }
   ]

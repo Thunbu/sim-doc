@@ -1,10 +1,10 @@
 yarn.lock
 .idea/
-dist/*
+dist/
 .DS_Store
 .project
 /package-lock.json
 /yarn.lock
-node_modules/*
 node_modules/
 npm-debug.log
+/.history

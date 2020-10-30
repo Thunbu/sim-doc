@@ -1,16 +1,15 @@
 
 declare interface AjaxParams {
     type: 'GET'|'POST',
-    dataType: 'json'|'xml',
+    dataType: 'json'|'xml'|'text',
     header?: {
-        [key: string]: string|number|boolean
+        [string]: string|number|boolean
     },
     url: string,
-    data: any
 }
 
 declare namespace Utils {
-    export function ajax<T>(params: AjaxParams): Promise<T>;
+    export declare function ajax<T>(params: AjaxParams): Promise<T>;
 }
 
 export = Utils;

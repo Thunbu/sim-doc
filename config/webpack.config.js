@@ -3,7 +3,7 @@ const rootDir = path.resolve(process.cwd(), '');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");//css分离打包
 const {getEntry, htmlTemplate} = require('./tools');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const webPackConfig = {
 	entry: getEntry(),
@@ -43,24 +43,11 @@ const webPackConfig = {
 				}]
 			},
 			{
-				test: /\.(js|jsx|ts|tsx)$/,
+				test: /\.(tsx?|js)$/,
 				loader: 'babel-loader',
-				options: {
-					customize: require.resolve(
-						'babel-preset-react-app/webpack-overrides'
-					),
-					plugins: [
-						[require.resolve('babel-plugin-import'), {
-							"libraryName": "antd",
-							"libraryDirectory": "lib",
-							// "style": "css" // `style: true` 会加载 less 文件
-						}],
-					],
-					cacheDirectory: true,
-					cacheCompression: true,
-					compact: true,
-				}
-			},
+				options: { cacheDirectory: true },
+				exclude: /node_modules/,
+			}
 		]
 	},
 	resolve: {
@@ -82,7 +69,15 @@ const webPackConfig = {
 			{from: rootDir + '/src/assets/images/favicon.ico', to: rootDir + '/dist/favicon.ico'},
 			// { from: rootDir + '/src/assets/font' , to: rootDir + '/dist/assets/font'},
 			// { from: rootDir + '/src/assets/js' , to: rootDir + '/dist/assets/js'}
-		])
+		]),
+		new ForkTsCheckerWebpackPlugin({
+			typescript: {
+				diagnosticOptions: {
+					semantic: true,
+					syntactic: true,
+				},
+			},
+		}),
 	],
 	optimization: {}
 };

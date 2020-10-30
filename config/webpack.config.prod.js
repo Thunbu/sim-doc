@@ -6,10 +6,6 @@ const manifestFile = require('../manifest');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");//css分离打包
 
-baseConfig.module.rules.push({
-	test: /\.tsx?$/,
-	use: "ts-loader",
-});
 baseConfig.optimization.minimize = true;
 baseConfig.output.publicPath = './';
 const cacheGroups = {};

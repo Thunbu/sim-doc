@@ -24,10 +24,6 @@ const setting = {
 baseConfig.devtool = '#eval-source-map';
 baseConfig.output.publicPath = '/';
 baseConfig.module.rules.push({
-	test: /\.tsx?$/,
-	use: "ts-loader",
-});
-baseConfig.module.rules.push({
 	test: /\.less$/,
 	use: [
 		'style-loader',
@@ -53,9 +49,10 @@ baseConfig.module.rules.push({
 		},
 	]
 });
-baseConfig.plugins.push(new webpack.NamedModulesPlugin(), new webpack.HotModuleReplacementPlugin());
 baseConfig.devServer = setting; 					// 配置服务以及代理
 baseConfig.devtool = 'cheap-module-eval-source-map'; 	// 生成source map 以供调试
+baseConfig.plugins.push(new webpack.NamedModulesPlugin());
+baseConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
 baseConfig.plugins.push(
 	new webpack.DefinePlugin({
 		'process.env.NODE_ENV': '"development"'

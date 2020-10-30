@@ -1,18 +1,20 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "jsx": "react",
-    "allowJs": true,
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "strict": true
+    "target": "ES5",
+    "module": "CommonJS",
+    "lib": [
+      "ES5",
+      "ScriptHost",
+      "dom"
+    ],
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "strict": true,
+    "baseUrl": "./src",
+    "outDir": "./dist"
   },
-  "include": [
-    "./src/component_ts/"
-  ],
-  "exclude": [
-    "./node_modules/"
-  ]
+  "include": ["./src"],
+  "exclude": ["node_modules"]
 }
