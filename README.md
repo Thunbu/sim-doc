@@ -1,6 +1,6 @@
 # 闪布 SDK
 
-## 文档/菜单维护地址： ```oss://flashchart-oss/sammbo-web/developer/```
+## 文档/菜单维护地址：  ```oss://flashchart-oss/sammbo-web/developer/```
 
 # 闪布IM SDK 产品介绍V1.0
 
