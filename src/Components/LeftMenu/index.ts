@@ -87,9 +87,14 @@ export default class LeftMenu {
      * @return {void}
      */
     protected onMenuItemClick = (element: HTMLElement) => {
-        const pageId = element.getAttribute('d-id')
+        const pageId = element.getAttribute('d-id');
+        const activeItem = this.props.el?.querySelector('.__item_active');
         if (pageId) {
-            this.changePageTo(+pageId);
+            this.changePageTo(pageId);
+            if (activeItem) {
+                activeItem.className = activeItem.className.replace(/\s*__item_active/g, '');
+            }
+            element.className += ' __item_active';
         }
     };
     /**
@@ -101,7 +106,7 @@ export default class LeftMenu {
      * @param {number} pageId - 页面ID
      * @return {void}
      */
-    protected changePageTo = (pageId: number) => {
+    protected changePageTo = (pageId: string) => {
         const url = `${window.location.pathname}?page=${pageId}`;
         window.history.pushState({ page: pageId }, '', url);
         this.renderPage();
@@ -140,8 +145,9 @@ export default class LeftMenu {
      * @return {void}
      */
     protected renderDom = (): void => {
+        const searchMap = GetLocationSearchMap();
         try {
-            this.props.el!.innerHTML = this.getDomStringByMenuJSONArray(this.menuJSON.children || []);
+            this.props.el!.innerHTML = this.getDomStringByMenuJSONArray(this.menuJSON.children || [], searchMap.page);
         } catch (e) {
             this.throwError('未获取到渲染内容');
         }
@@ -153,13 +159,14 @@ export default class LeftMenu {
      * @name getDomStringByMenuJSONArray
      * @description 通过数组获取dom字符串
      * @param {LeftMenuJSON[]} JSONList - 菜单数组
+     * @param {string} pageId - 当前所在页面
      * @return {string}
      */
-    protected getDomStringByMenuJSONArray = (JSONList: LeftMenuJSON[]): string => {
+    protected getDomStringByMenuJSONArray = (JSONList: LeftMenuJSON[], pageId: string): string => {
         return JSONList.map((item: LeftMenuJSON): string => {
             if (item.children && item.children.length) {
                 return `
-                    <div class="menuItem__parent __menu">
+                    <div class="menuItem__parent __menu ${pageId.split('-')[0] === item.id ? 'active' : ''}">
                         <div class="menuTitle __title">
                             <span>${item.name}</span>
                             <span class="expand__icon">
@@ -169,13 +176,13 @@ export default class LeftMenu {
                             </span>
                         </div>
                         <div class="menu__childrenList __deep">
-                            ${this.getDomStringByMenuJSONArray(item.children)}
+                            ${this.getDomStringByMenuJSONArray(item.children, pageId)}
                         </div>
                     </div>
                 `;
             } else {
                 return `
-                    <div class="menuItem__child __item" d-link="${item.MDFile}" d-id="${item.id}">
+                    <div class="menuItem__child __item ${pageId + '' === item.id + '' ? '__item_active' : ''}" d-id="${item.id}">
                         <p class="menuTitle">${item.name}</p>
                     </div>
                 `
@@ -226,7 +233,7 @@ export default class LeftMenu {
         if (pageId === '0' || !pageId) {
             return menuData.MDFile;
         } else {
-            console.log(this.mapDataGetMDFilePath(menuData.children!, pageId));
+            // console.log(this.mapDataGetMDFilePath(menuData.children!, pageId));
             return this.mapDataGetMDFilePath(menuData.children!, pageId) || menuData.MDFile;
         }
     };

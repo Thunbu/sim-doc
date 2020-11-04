@@ -1,5 +1,4 @@
 import './index.less';
-// import '../assets/css/typoraMDScheme/qd-dark.less';
 import LeftMenu from "../Components/LeftMenu";
 import RightContent from "../Components/RenderMD";
 
