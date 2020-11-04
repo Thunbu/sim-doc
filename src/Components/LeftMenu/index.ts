@@ -63,12 +63,14 @@ export default class LeftMenu {
                 const eventTargetList = e.composedPath();
                 for (let i = 0; i < eventTargetList.length; i++) {
                     const firstLevelChildren = <HTMLElement>eventTargetList[i];
-                    if (firstLevelChildren.className.indexOf('__item') > -1) {
-                        this.onMenuItemClick(firstLevelChildren);
-                        break;
-                    } else if (firstLevelChildren.className.indexOf('__menu') > -1) {
-                        this.expandMenu(firstLevelChildren);
-                        break;
+                    if (firstLevelChildren && firstLevelChildren.className) {
+                        if (firstLevelChildren.className.indexOf('__item') > -1) {
+                            this.onMenuItemClick(firstLevelChildren);
+                            break;
+                        } else if (firstLevelChildren.className.indexOf('__menu') > -1) {
+                            this.expandMenu(firstLevelChildren);
+                            break;
+                        }
                     }
                 }
             }
