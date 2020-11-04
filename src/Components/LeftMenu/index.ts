@@ -151,6 +151,7 @@ export default class LeftMenu {
         try {
             this.props.el!.innerHTML = this.getDomStringByMenuJSONArray(this.menuJSON.children || [], searchMap.page);
         } catch (e) {
+            console.log(e);
             this.throwError('未获取到渲染内容');
         }
     };
@@ -168,7 +169,7 @@ export default class LeftMenu {
         return JSONList.map((item: LeftMenuJSON): string => {
             if (item.children && item.children.length) {
                 return `
-                    <div class="menuItem__parent __menu ${pageId.split('-')[0] === item.id ? 'active' : ''}">
+                    <div class="menuItem__parent __menu ${(pageId && pageId.split('-')[0]) === item.id ? 'active' : ''}">
                         <div class="menuTitle __title">
                             <span>${item.name}</span>
                             <span class="expand__icon">
