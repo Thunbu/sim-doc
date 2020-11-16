@@ -1,12 +1,44 @@
 {
   "name": "首页",
-  "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/%E4%BA%A7%E5%93%81/%E9%97%AA%E5%B8%83IM%20SDK%20%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3V1.0.md",
+  "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/%E4%BA%A7%E5%93%81/%E9%97%AA%E5%B8%83IM%20SDK%20%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3V1.0.md",
   "children": [
     {
       "name": "产品介绍",
       "id": "101",
       "children": [],
-      "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/%E4%BA%A7%E5%93%81/%E9%97%AA%E5%B8%83IM%20SDK%20%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3V1.0.md"
+      "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/%E4%BA%A7%E5%93%81/%E9%97%AA%E5%B8%83IM%20SDK%20%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3V1.0.md"
+    },
+    {
+      "name": "iOS 文档",
+      "id": "100",
+      "children": [
+        {
+          "name": "快速入门",
+          "id": "100-1",
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/iOS/1_iOS_%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md"
+        },
+        {
+          "name": "初始化和登录",
+          "id": "100-2",
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/iOS/2_iOS_%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E7%99%BB%E5%BD%95.md"
+        },
+        {
+          "name": "消息收发",
+          "id": "100-3",
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/iOS/3_iOS_%E6%B6%88%E6%81%AF%E6%94%B6%E5%8F%91.md"
+        },
+        {
+          "name": "群组功能",
+          "id": "100-4",
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/iOS/4_iOS_%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD.md"
+        },
+        {
+          "name": "错误码列表",
+          "id": "100-5",
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/iOS/5_iOS_%E9%94%99%E8%AF%AF%E7%A0%81%E5%88%97%E8%A1%A8.md"
+        }
+      ],
+      "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/server/%E6%9C%8D%E5%8A%A1%E7%AB%AFapi%E6%96%87%E6%A1%A3.md"
     },
     {
       "name": "Web",
@@ -15,64 +47,54 @@
         {
           "name": "快速入门",
           "id": "102-1",
-          "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/web/1.%20%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91.md"
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/web/1.%20%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91.md"
         },
         {
           "name": "初始化和登录",
           "id": "102-2",
-          "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/web/2.%20%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E7%99%BB%E5%BD%95.md"
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/web/2.%20%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E7%99%BB%E5%BD%95.md"
         },
         {
           "name": "消息收发",
           "id": "102-3",
-          "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/web/3.%20%E6%B6%88%E6%81%AF%E6%94%B6%E5%8F%91.md"
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/web/3.%20%E6%B6%88%E6%81%AF%E6%94%B6%E5%8F%91.md"
         },
         {
           "name": "群组功能",
           "id": "102-4",
-          "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/web/4.%20%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD.md"
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/web/4.%20%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD.md"
         },
         {
           "name": "错误码列表",
           "id": "102-5",
-          "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/web/5.%20%E9%94%99%E8%AF%AF%E7%A0%81%E5%88%97%E8%A1%A8.md"
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/web/5.%20%E9%94%99%E8%AF%AF%E7%A0%81%E5%88%97%E8%A1%A8.md"
         },
         {
           "name": "SDK方法",
           "id": "102-6",
-          "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/web/SIM%E6%96%B9%E6%B3%95.md"
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/web/SIM%E6%96%B9%E6%B3%95.md"
         },
         {
           "name": "SDK总览",
           "id": "102-7",
-          "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/web/SIM%E6%80%BB%E8%A7%88.md"
+          "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/web/SIM%E6%80%BB%E8%A7%88.md"
         }
       ],
-      "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/1.%20%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91.md"
+      "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/1.%20%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91.md"
     },
     {
       "name": "server",
       "id": "103",
       "children": [],
-      "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/server/%E6%9C%8D%E5%8A%A1%E7%AB%AFapi%E6%96%87%E6%A1%A3.md"
+      "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/server/%E6%9C%8D%E5%8A%A1%E7%AB%AFapi%E6%96%87%E6%A1%A3.md"
     },
     {
       "name": "Demo 体验",
       "id": "104",
       "children": [],
-      "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/Demo.md"
-    },
-    {
-      "name": "闪布订阅号",
-      "id": "105",
-      "children": [
-        {
-          "name": "订阅号接入",
-          "id": "105-1",
-          "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/subscribe/subscribe.md"
-        }
-      ],
-      "MDFile": "https://flashchart-oss.oss-cn-hangzhou.aliyuncs.com/sammbo-web/developer/1.%20%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91.md"
+      "MDFile": "https://developer.sammbo.com/thunbu-assets/im-doc/Demo.md"
     }
   ]
 }
+
+

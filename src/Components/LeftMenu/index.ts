@@ -42,7 +42,7 @@ export default class LeftMenu {
      */
     protected getMenuConfigJson = (): Promise<LeftMenuJSON> => {
         return ajax<LeftMenuJSON>({
-            url: 'https://bossfs.sammbo.com/sammbo-web/developer/developerLeftMenu.json',
+            url: 'https://developer.sammbo.com/thunbu-assets/im-doc/developerLeftMenu.json',
             type: 'GET',
             dataType: 'json',
         }).catch(() => {

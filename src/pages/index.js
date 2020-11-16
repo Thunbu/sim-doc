@@ -12,11 +12,11 @@ const schemeHandler = () => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 			// dark
 			rootContainer.className = 'dark';
-			link.href = 'https://bossfs.sammbo.com/sammbo-web/scheme/qd-dark.css';
+			link.href = 'https://developer.sammbo.com/thunbu-assets/im-doc-scheme/qd-dark.css';
 		} else {
 			// light
 			rootContainer.className = 'light';
-			link.href = 'https://bossfs.sammbo.com/sammbo-web/scheme/qd-light.css';
+			link.href = 'https://developer.sammbo.com/thunbu-assets/im-doc-scheme/qd-light.css';
 		}
 		styleContainer.innerHTML = '';
 		styleContainer.appendChild(link);
