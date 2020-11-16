@@ -1,5 +1,7 @@
 # 闪布 SDK
 
+## 文档地址： ```https://developer.sammbo.com/imsdk-doc/```
+
 ## 文档/菜单维护地址：  ```https://developer.sammbo.com/thunbu-assets/```
 
 # 闪布IM SDK 产品介绍V1.0
